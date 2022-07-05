@@ -30,20 +30,10 @@ export class App extends Component {
     return (
       <Box bg="background" padding="20px">
         <Section title="Please leave feedback">
-          <Box>
-            {this.stateKeys.map(stateKey => {
-              return (
-                <FeedbackOptions
-                  options={
-                    stateKey[0].toLocaleUpperCase() +
-                    stateKey.slice(1, stateKey.length)
-                  }
-                  key={stateKey}
-                  onLeaveFeedback={this.incrementStat}
-                />
-              );
-            })}
-          </Box>
+          <FeedbackOptions
+            options={this.stateKeys}
+            onLeaveFeedback={this.incrementStat}
+          />
 
           <Statistics
             title="Statistics"
