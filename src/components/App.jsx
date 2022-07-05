@@ -28,7 +28,7 @@ export class App extends Component {
 
   render() {
     return (
-      <Box bg="background">
+      <Box bg="background" padding="20px">
         <Section title="Please leave feedback">
           <Box>
             {this.stateKeys.map(stateKey => {
